@@ -1,0 +1,21 @@
+// Place all the styles related to the player controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#player {
+  margin: auto;
+  text-align: center;
+  width: 1280px;
+}
+
+#player-stage {
+  height: 720px;
+  position: relative;
+}
+
+#player-stage iframe {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
