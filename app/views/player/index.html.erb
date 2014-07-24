@@ -1,4 +1,4 @@
-<h1><a href="/">VJ4Real</a></h1>
+<h1><a href="/">vj4real</a></h1>
 
 <div id="player">
 
@@ -8,20 +8,29 @@
   </div>
 
   <form id="controls">
-    <label for="video_left">Video left</label>
-    <input type="text" name="video_left" value="<%= @video_left %>">
 
-    <label for="video_right">Video right</label>
-    <input type="text" name="video_right" value="<%= @video_right %>">
+    <div class="one col">
+      <label for="video_left">Video left (youtube URL)</label>
+      <input type="text" name="video_left" value="<%= @video_left %>" placeholder="http://www.youtube.com/watch?v=T-sxSd1uwoU">
+    </div>
 
-    <label for="crossfade audio">Audio Crossfade</label>
-    <input name="audio_crossfade" type="range" id="crossfade_audio" min="0" value="<%= @audio_crossfade %>" max="100">
+    <div class="one col">
+        <label for="video_right">Video right (youtube URL)</label>
+        <input type="text" name="video_right" value="<%= @video_right %>" placeholder="http://www.youtube.com/watch?v=0V38hAK0C_g">
+    </div>
 
-    <label for="crossfade_video">Video Crossfade</label>
-    <input name="video_crossfade" type="range" id="crossfade_video" min="0" value="<%= @video_crossfade %>" max="100">
+    <div class="two cols">
 
+      <label for="crossfade audio">Audio Crossfade</label>
+      <input name="audio_crossfade" type="range" id="crossfade_audio" min="0" value="<%= @audio_crossfade %>" max="100">
 
-    <input type="submit" value="save">
+      <label for="crossfade_video">Video Crossfade</label>
+      <input name="video_crossfade" type="range" id="crossfade_video" min="0" value="<%= @video_crossfade %>" max="100">
+
+      <input type="submit" value="save">
+
+    </div>
+
   </form>
 
 </div>

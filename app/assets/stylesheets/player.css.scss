@@ -5,12 +5,20 @@
 #player {
   margin: auto;
   text-align: center;
-  width: 1280px;
+  width: 853px;
+  @media(min-width: 1280px) {
+    width: 1280px;
+  }
+
 }
 
 #player-stage {
-  height: 720px;
+  height: 480px;
   position: relative;
+  @media(min-width: 1280px) {
+    height: 720px;
+  }
+
 }
 
 #player-stage iframe {
@@ -26,19 +34,38 @@ form {
 }
 
 label {
-  display: inline-block;
+  display: block;
   margin: 1em 0;
   text-align: left;
-  width: 50%;
+  width: 100%;
 }
 
 input {
   box-sizing: border-box;
+  display: block;
   font: inherit;
   margin: 1em 0;
-  width: 50%;
+  width: 100%;
 }
 
 input[type="submit"] {
   width: auto;
+}
+
+form#controls {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.col,
+.cols {
+  box-sizing: border-box;
+  padding: 0 2em;
+  &.one {
+    width: 50%;
+  }
+
+  &.two {
+    width: 100%;
+  }
 }
